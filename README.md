@@ -1,46 +1,40 @@
-# Getting Started with Create React App
+# ArkusBlog
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ArkusBlog is a modern blog application developed using React and TypeScript. This application allows users to create, edit, delete, and list blog posts, with persistent data storage using local storage. The application features a user-friendly interface and is built with modern web development technologies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Create Blog Posts**: Users can create new blog posts, including a title, content, and image upload.
+- **Edit Blog Posts**: Users can edit existing blog posts.
+- **Delete Blog Posts**: Users can delete unwanted blog posts.
+- **Local Storage Support**: Blog posts are saved to local storage, ensuring data persistence even after the application is restarted.
+- **Infinite Scroll**: Blog posts are listed using infinite scroll, optimizing page loading times.
+- **Search Functionality**: Users can search blog posts by title.
+- **WYSIWYG Editor Support**: A user-friendly WYSIWYG editor is used for creating and editing content.
 
-### `npm start`
+## Technologies and Libraries Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ArkusBlog utilizes various technologies and libraries:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**: The core library for building the user interface with a component-based architecture.
+- **TypeScript**: A statically typed superset of JavaScript, providing type safety and helping to reduce bugs.
+- **Redux Toolkit**: Used for global state management in the application. Redux Toolkit simplifies the usage of Redux.
+- **React-Redux**: A library that integrates Redux with React.
+- **React Router Dom**: Provides navigation and routing functionalities for the Single Page Application (SPA).
+- **Axios**: A promise-based HTTP client used for making API calls.
+- **React Hook Form**: Manages form state and validation in a performant and React-friendly way.
+- **React-Quill**: A WYSIWYG editor used for creating and editing blog post content.
+- **HTML React Parser**: Converts HTML strings into React components, ensuring safe rendering of blog content.
+- **UUID**: Generates unique IDs for blog posts.
+- **MUI (Material-UI)**: A React component library for building stylish and responsive user interfaces.
+- **React Infinite Scroll Component**: Implements infinite scroll functionality for blog post lists.
 
-### `npm test`
+## Installation and Running the Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project locally, follow these steps:
 
-### `npm run build`
+### Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/username/arkusblog.git
+cd arkusblog
