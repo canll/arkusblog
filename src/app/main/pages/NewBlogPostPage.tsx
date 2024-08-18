@@ -69,7 +69,9 @@ const NewBlogPostPage: React.FC = () => {
     dispatch(createItem(newBlogPost));
     navigate(`/post/${newId}`);
   };
-
+  const handleCancel = () => {
+    navigate(-1);
+  };
   const getImageUrl = (file: File | null) => {
     return file ? URL.createObjectURL(file) : "";
   };
@@ -126,7 +128,7 @@ const NewBlogPostPage: React.FC = () => {
               value={content}
               onChange={setContent}
               placeholder="Write your content here..."
-              style={{ height: "300px", marginBottom: "20px" }}
+              style={{ height: "250px", marginBottom: "20px" }}
             />
             {contentError && (
               <Typography color="error" variant="body2">
@@ -134,15 +136,28 @@ const NewBlogPostPage: React.FC = () => {
               </Typography>
             )}
           </Box>
-          <Button
-            variant="contained"
-            color="primary"
-            fullWidth
-            sx={{ marginTop: 2 }}
-            onClick={handleSubmit}
+          <Box
+            sx={{ display: "flex", justifyContent: "space-between", gap: 2 }}
           >
-            Create Post
-          </Button>
+            <Button
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{ marginTop: 2 }}
+              onClick={handleSubmit}
+            >
+              Create Post
+            </Button>
+            <Button
+              variant="outlined"
+              color="warning"
+              fullWidth
+              sx={{ marginTop: 2 }}
+              onClick={handleCancel}
+            >
+              Cancel
+            </Button>
+          </Box>
         </Box>
       </Box>
     </Box>
