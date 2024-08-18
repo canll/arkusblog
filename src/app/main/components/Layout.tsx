@@ -1,26 +1,50 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../store/store";
+import { toggleTheme } from "../../Features/theme/themeSlice";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Container,
+} from "@mui/material";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
+const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const dispatch = useDispatch();
+  const mode = useSelector((state: RootState) => state.theme.mode);
 
-const Layout = ({ children }: LayoutProps) => {
+  const theme = useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode]
+  );
+
   return (
-    <div>
-      <header style={{ padding: "10px", background: "#eee" }}>
-        <h1>My Blog</h1>
-        <nav>
-          <p style={{ margin: "0 10px" }}>Home</p>
-          <p style={{ margin: "0 10px" }}>New Post</p>
-        </nav>
-      </header>
-      <main style={{ padding: "20px" }}>{children}</main>
-      <footer
-        style={{ padding: "10px", background: "#eee", textAlign: "center" }}
-      >
-        <p>&copy; 2024 My Blog</p>
-      </footer>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppBar position="fixed">
+        <Toolbar>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>
+            My Blogs
+          </Typography>
+          <IconButton onClick={() => dispatch(toggleTheme())} color="inherit">
+            {mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+      <Container maxWidth="lg" style={{ marginTop: "94px" }}>
+        {children}
+      </Container>
+    </ThemeProvider>
   );
 };
 

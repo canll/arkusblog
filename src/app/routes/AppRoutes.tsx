@@ -6,7 +6,7 @@ import NewBlogPostPage from "../main/pages/NewBlogPostPage";
 import EditBlogPostPage from "../main/pages/EditBlogPostPage";
 import NotFoundPage from "../main/pages/NotFoundPage";
 
-const AppRoutes = () => {
+const AppRoutes: React.FC = () => {
   return (
     <Router>
       <Routes>
