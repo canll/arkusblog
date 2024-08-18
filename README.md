@@ -1,6 +1,9 @@
 # ArkusBlog
 
 ArkusBlog is a modern blog application developed using React and TypeScript. This application allows users to create, edit, delete, and list blog posts, with persistent data storage using local storage. The application features a user-friendly interface and is built with modern web development technologies.
+# You can access the website by clicking here
+
+(http://www.kidolog.com)
 
 ## Features
 
@@ -36,7 +39,7 @@ To run the project locally, follow these steps:
 ### Clone the repository:
 
 ```bash
-git clone https://github.com/username/arkusblog.git
+git clone https://github.com/canll/arkusblog.git
 cd arkusblog
 ```
 
