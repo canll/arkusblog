@@ -38,10 +38,16 @@ To run the project locally, follow these steps:
 ```bash
 git clone https://github.com/username/arkusblog.git
 cd arkusblog
+```
 
-### Install dependencies::
+### Install dependencies:
 
 ```bash
 yarn install
+```
+### Start the application:
 
+```bash
+yarn start
+```
 
