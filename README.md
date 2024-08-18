@@ -2,7 +2,7 @@
 
 ArkusBlog is a modern blog application developed using React and TypeScript. This application allows users to create, edit, delete, and list blog posts, with persistent data storage using local storage. The application features a user-friendly interface and is built with modern web development technologies.
 ## You can access the website by clicking here
-https://66c225cf2e7977b8e2e44d95--superb-cobbler-fd26ab.netlify.app/
+https://66c22928d9e6acbbee73909b--stately-sprite-d2f6a1.netlify.app/
 ## Features
 
 - **Create Blog Posts**: Users can create new blog posts, including a title, content, and image upload.
