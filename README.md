@@ -2,7 +2,7 @@
 
 ArkusBlog is a modern blog application developed using React and TypeScript. This application allows users to create, edit, delete, and list blog posts, with persistent data storage using local storage. The application features a user-friendly interface and is built with modern web development technologies.
 # You can access the website by clicking here
-
+<a href="http://www.kidolog.com" target="_blank">Kidolog websitesini ziyaret edin</a>
 (http://www.kidolog.com)
 
 ## Features
